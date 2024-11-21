@@ -4,12 +4,15 @@ $primary-blue: hsl(185, 75%, 39%);
 $primary-dark-blue: hsl(229, 23%, 23%);
 $primary-gray-blue: hsl(227, 10%, 46%);
 $neutral-gray: hsl(0, 0%, 59%);
+$border-gray: hsla(0, 0%, 59%, 0.3);
 
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
+$font-size-small: 0.625rem;
 $font-size-base: 1rem;
 $font-size-medium: 1.125rem;
+$font-size-large: 1.25rem;
 
 $font-family-primary: 'Kumbh Sans', serif;
 
@@ -24,13 +27,38 @@ $font-family-primary: 'Kumbh Sans', serif;
 .container {
   font-family: $font-family-primary;
   background-color: $primary-blue;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -42px;
+    left: -84px;
+    height: 320px;
+    width: 100%;
+    display: block;
+    transform: rotate(160deg);
+    background-image: url('../images/bg-pattern-top.svg');
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -64px;
+    right: -82px;
+    height: 311px;
+    width: 100%;
+    display: block;
+    transform: rotate(340deg);
+    background-image: url('../images/bg-pattern-bottom.svg');
+  }
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 60%;
+  z-index: 2;
+  height: 348px;
   width: 90%;
   background: #fff;
   transform: translate(-50%, -50%);
@@ -40,27 +68,66 @@ $font-family-primary: 'Kumbh Sans', serif;
   &_header {
     display: inline-block;
     width: 100%;
-    height: 30%;
+    height: 35%;
   }
 
   &_avatar {
     position: absolute;
-    top: calc(30% - 50px);
+    top: calc(35% - 53px);
     left: 50%;
     height: 100px;
     width: 100px;
-    border: 4px solid #fff;
+    border: 6px solid #fff;
     border-radius: 50%;
     transform: translateX(-50%);
   }
 
   &_profile {
     margin-top: 60px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border-gray;
     color: $primary-dark-blue;
     text-align: center;
   }
 
+  &_name {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+  }
+
   &_age {
+    display: inline-block;
+    margin-left: 4px;
     color: $neutral-gray;
+    font-weight: $font-weight-regular;
+  }
+
+  &_city {
+    margin-top: 8px;
+    color: $neutral-gray;
+    font-weight: $font-weight-regular;
+  }
+
+  &_stats {
+    padding: 24px 24px 0;
+    font-size: $font-size-large;
+    display: flex;
+    justify-content: space-between;
+
+    &_name {
+      font-size: $font-size-small;
+      font-weight: 400;
+      color: $primary-gray-blue;
+      letter-spacing: 2px;
+    }
+  }
+  &_counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    font-weight: 700;
+    color: $primary-dark-blue;
   }
 }
