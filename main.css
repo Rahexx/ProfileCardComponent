@@ -157,16 +157,18 @@
     left: -320px;
     transform: rotate(4deg); }
   .decorations__decorative.bottom {
-    bottom: -620px;
+    bottom: -640px;
     right: -288px;
     transform: rotate(6deg); }
 
   .modal {
-    height: 400px;
-    max-width: 360px; }
+    height: 388px;
+    max-width: 352px; }
+    .modal_name {
+      font-size: 1.125rem; }
     .modal_profile {
       padding-bottom: 24px; }
     .modal_counter {
-      font-size: 1.375rem; } }
+      font-size: 1.25rem; } }
 
 /*# sourceMappingURL=main.css.map */
