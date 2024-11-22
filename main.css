@@ -149,16 +149,24 @@
       height: 120px;
       width: 120px; }
     .modal_profile {
-      margin-top: 80px;
+      margin-top: 68px;
       padding-bottom: 32px; } }
 @media (min-width: 1400px) {
   .decorations__decorative.top {
-    top: -460px;
-    left: -292px;
-    transform: rotate(18deg); }
+    top: -500px;
+    left: -320px;
+    transform: rotate(4deg); }
   .decorations__decorative.bottom {
-    bottom: -572px;
+    bottom: -620px;
     right: -288px;
-    transform: rotate(6deg); } }
+    transform: rotate(6deg); }
+
+  .modal {
+    height: 400px;
+    max-width: 360px; }
+    .modal_profile {
+      padding-bottom: 24px; }
+    .modal_counter {
+      font-size: 1.375rem; } }
 
 /*# sourceMappingURL=main.css.map */
