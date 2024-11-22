@@ -67,8 +67,8 @@
     position: absolute;
     top: calc($avatar-offset - 53px);
     left: 50%;
-    height: $avatar-offset;
-    width: $avatar-offset;
+    height: $avatar-size;
+    width: $avatar-size;
     border: 6px solid #fff;
     border-radius: 50%;
     transform: translateX(-50%);
@@ -208,8 +208,8 @@
 
     &_avatar {
       top: calc($avatar-offset-medium - 63px);
-      height: $avatar-offset-large;
-      width: $avatar-offset-large;
+      height: $avatar-size-large;
+      width: $avatar-size-large;
     }
 
     &_profile {
