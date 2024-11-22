@@ -229,7 +229,7 @@
       }
 
       &.bottom {
-        bottom: -620px;
+        bottom: -640px;
         right: -288px;
         transform: rotate(6deg);
       }
@@ -237,14 +237,18 @@
   }
 
   .modal {
-    height: 400px;
-    max-width: 360px;
+    height: 388px;
+    max-width: 352px;
+
+    &_name {
+      font-size: $font-size-medium;
+    }
 
     &_profile {
       padding-bottom: $space-m;
     }
     &_counter {
-      font-size: $font-size-xl;
+      font-size: $font-size-large;
     }
   }
 }
