@@ -237,9 +237,14 @@
   }
 
   .modal {
-    height: 388px;
+    height: 380px;
     max-width: 352px;
 
+    &_avatar {
+      top: calc(#{$avatar-offset-medium} - 58px);
+      height: $avatar-size-m;
+      width: $avatar-size-m;
+    }
     &_name {
       font-size: $font-size-medium;
     }
@@ -248,7 +253,7 @@
       padding-bottom: $space-m;
     }
     &_counter {
-      font-size: $font-size-large;
+      font-size: $font-size-medium;
     }
   }
 }
