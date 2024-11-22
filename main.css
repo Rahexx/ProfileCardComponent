@@ -162,13 +162,17 @@
     transform: rotate(6deg); }
 
   .modal {
-    height: 388px;
+    height: 380px;
     max-width: 352px; }
+    .modal_avatar {
+      top: calc(40% - 58px);
+      height: 110px;
+      width: 110px; }
     .modal_name {
       font-size: 1.125rem; }
     .modal_profile {
       padding-bottom: 24px; }
     .modal_counter {
-      font-size: 1.25rem; } }
+      font-size: 1.125rem; } }
 
 /*# sourceMappingURL=main.css.map */
