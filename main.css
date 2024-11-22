@@ -51,7 +51,7 @@
     height: 35%; }
   .modal_avatar {
     position: absolute;
-    top: calc($avatar-offset - 53px);
+    top: calc(35% - 53px);
     left: 50%;
     height: 100px;
     width: 100px;
@@ -115,7 +115,7 @@
     .modal_header {
       height: 42%; }
     .modal_avatar {
-      top: calc($avatar-offset-large - 53px); } }
+      top: calc(42% - 53px); } }
 @media (min-width: 1024px) {
   .decorations__decorative {
     width: 800px;
@@ -145,7 +145,7 @@
     .modal_header {
       height: 40%; }
     .modal_avatar {
-      top: calc($avatar-offset-medium - 63px);
+      top: calc(40% - 63px);
       height: 120px;
       width: 120px; }
     .modal_profile {
