@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+$primary-blue: hsl(185, 75%, 39%);
+$primary-dark-blue: hsl(229, 23%, 23%);
+$primary-gray-blue: hsl(227, 10%, 46%);
+$neutral-gray: hsl(0, 0%, 59%);
+$border-gray: hsla(0, 0%, 59%, 0.3);
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$font-size-small: 0.625rem;
+$font-size-base: 1rem;
+$font-size-medium: 1.125rem;
+$font-size-large: 1.25rem;
+
+$font-family-primary: 'Kumbh Sans', serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: $font-family-primary;
+  background-color: $primary-blue;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.decorations {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  &__decorative {
+    position: absolute;
+    width: 320px;
+    height: 500px;
+    display: inline-block;
+    transform-origin: center center;
+
+    &.top {
+      top: -212px;
+      left: -128px;
+      transform: rotate(22deg);
+    }
+
+    &.bottom {
+      bottom: -236px;
+      right: -124px;
+      transform: rotate(22deg);
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  height: 348px;
+  max-width: 400px;
+  width: 90%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  overflow: hidden;
+
+  &_header {
+    display: inline-block;
+    width: 100%;
+    height: 35%;
+  }
+
+  &_avatar {
+    position: absolute;
+    top: calc(35% - 53px);
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+
+  &_profile {
+    margin-top: 60px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border-gray;
+    color: $primary-dark-blue;
+    text-align: center;
+  }
+
+  &_name {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+  }
+
+  &_age {
+    display: inline-block;
+    margin-left: 4px;
+    color: $neutral-gray;
+    font-weight: $font-weight-regular;
+  }
+
+  &_city {
+    margin-top: 8px;
+    color: $neutral-gray;
+    font-weight: $font-weight-regular;
+  }
+
+  &_stats {
+    padding: 24px 24px 0;
+    font-size: $font-size-large;
+    display: flex;
+    justify-content: space-between;
+
+    &_name {
+      font-size: $font-size-small;
+      font-weight: 400;
+      color: $primary-gray-blue;
+      letter-spacing: 2px;
+    }
+  }
+  &_counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    font-weight: 700;
+    color: $primary-dark-blue;
+  }
+}
+
+@media (min-width: 768px) {
+  .decorations {
+    &__decorative {
+      width: 600px;
+      height: 600px;
+
+      &.top {
+        top: -212px;
+        left: -200px;
+        transform: rotate(15deg);
+      }
+
+      &.bottom {
+        bottom: -209px;
+        right: -240px;
+        transform: rotate(22deg);
+      }
+    }
+  }
+
+  .modal {
+    height: 400px;
+    max-width: 380px;
+
+    &_header {
+      height: 42%;
+    }
+
+    &_avatar {
+      top: calc(42% - 53px);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .decorations {
+    &__decorative {
+      width: 800px;
+      height: 800px;
+
+      &.top {
+        top: -360px;
+        left: -200px;
+        transform: rotate(15deg);
+      }
+
+      &.bottom {
+        bottom: -400px;
+        right: -220px;
+        transform: rotate(22deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .decorations {
+    &__decorative {
+      width: 1000px;
+      height: 1000px;
+
+      &.top {
+        top: -520px;
+        left: -313px;
+      }
+
+      &.bottom {
+        bottom: -572px;
+        right: -288px;
+      }
+    }
+  }
+
+  .modal {
+    height: 440px;
+    max-width: 400px;
+
+    &_header {
+      height: 40%;
+    }
+
+    &_avatar {
+      top: calc(40% - 63px);
+      height: 120px;
+      width: 120px;
+    }
+
+    &_profile {
+      margin-top: 80px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .decorations {
+    &__decorative {
+      &.top {
+        top: -460px;
+        left: -292px;
+        transform: rotate(18deg);
+      }
+
+      &.bottom {
+        bottom: -572px;
+        right: -288px;
+        transform: rotate(6deg);
+      }
+    }
+  }
+}
