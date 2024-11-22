@@ -1,20 +1,5 @@
+@import 'styles/variable.scss';
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-
-$primary-blue: hsl(185, 75%, 39%);
-$primary-dark-blue: hsl(229, 23%, 23%);
-$primary-gray-blue: hsl(227, 10%, 46%);
-$neutral-gray: hsl(0, 0%, 59%);
-$border-gray: hsla(0, 0%, 59%, 0.3);
-
-$font-weight-regular: 400;
-$font-weight-bold: 700;
-
-$font-size-small: 0.625rem;
-$font-size-base: 1rem;
-$font-size-medium: 1.125rem;
-$font-size-large: 1.25rem;
-
-$font-family-primary: 'Kumbh Sans', serif;
 
 *,
 *::before,
@@ -75,15 +60,15 @@ $font-family-primary: 'Kumbh Sans', serif;
   &_header {
     display: inline-block;
     width: 100%;
-    height: 35%;
+    height: $avatar-offset;
   }
 
   &_avatar {
     position: absolute;
-    top: calc(35% - 53px);
+    top: calc($avatar-offset - 53px);
     left: 50%;
-    height: 100px;
-    width: 100px;
+    height: $avatar-offset;
+    width: $avatar-offset;
     border: 6px solid #fff;
     border-radius: 50%;
     transform: translateX(-50%);
@@ -91,8 +76,8 @@ $font-family-primary: 'Kumbh Sans', serif;
   }
 
   &_profile {
-    margin-top: 60px;
-    padding-bottom: 24px;
+    margin-top: $space-xl;
+    padding-bottom: $space-m;
     border-bottom: 1px solid $border-gray;
     color: $primary-dark-blue;
     text-align: center;
@@ -105,26 +90,26 @@ $font-family-primary: 'Kumbh Sans', serif;
 
   &_age {
     display: inline-block;
-    margin-left: 4px;
+    margin-left: $space-xs;
     color: $neutral-gray;
     font-weight: $font-weight-regular;
   }
 
   &_city {
-    margin-top: 8px;
+    margin-top: $space-s;
     color: $neutral-gray;
     font-weight: $font-weight-regular;
   }
 
   &_stats {
-    padding: 24px 24px 0;
+    padding: $space-m $space-m 0;
     font-size: $font-size-large;
     display: flex;
     justify-content: space-between;
 
     &_name {
       font-size: $font-size-small;
-      font-weight: 400;
+      font-weight: $font-weight-regular;
       color: $primary-gray-blue;
       letter-spacing: 2px;
     }
@@ -133,9 +118,9 @@ $font-family-primary: 'Kumbh Sans', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: $space-xs;
     flex: 1;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
     color: $primary-dark-blue;
   }
 }
@@ -143,8 +128,8 @@ $font-family-primary: 'Kumbh Sans', serif;
 @media (min-width: 768px) {
   .decorations {
     &__decorative {
-      width: 600px;
-      height: 600px;
+      width: $decorative-size-medium;
+      height: $decorative-size-medium;
 
       &.top {
         top: -212px;
@@ -165,11 +150,11 @@ $font-family-primary: 'Kumbh Sans', serif;
     max-width: 380px;
 
     &_header {
-      height: 42%;
+      height: $avatar-offset-large;
     }
 
     &_avatar {
-      top: calc(42% - 53px);
+      top: calc($avatar-offset-large - 53px);
     }
   }
 }
@@ -177,8 +162,8 @@ $font-family-primary: 'Kumbh Sans', serif;
 @media (min-width: 1024px) {
   .decorations {
     &__decorative {
-      width: 800px;
-      height: 800px;
+      width: $decorative-size-large;
+      height: $decorative-size-large;
 
       &.top {
         top: -360px;
@@ -198,8 +183,8 @@ $font-family-primary: 'Kumbh Sans', serif;
 @media (min-width: 1200px) {
   .decorations {
     &__decorative {
-      width: 1000px;
-      height: 1000px;
+      width: $decorative-size-extra-large;
+      height: $decorative-size-extra-large;
 
       &.top {
         top: -520px;
@@ -218,18 +203,18 @@ $font-family-primary: 'Kumbh Sans', serif;
     max-width: 400px;
 
     &_header {
-      height: 40%;
+      height: $avatar-offset-medium;
     }
 
     &_avatar {
-      top: calc(40% - 63px);
-      height: 120px;
-      width: 120px;
+      top: calc($avatar-offset-medium - 63px);
+      height: $avatar-offset-large;
+      width: $avatar-offset-large;
     }
 
     &_profile {
-      margin-top: 80px;
-      padding-bottom: 32px;
+      margin-top: $space-xxl;
+      padding-bottom: $space-l;
     }
   }
 }
