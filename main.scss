@@ -223,16 +223,28 @@
   .decorations {
     &__decorative {
       &.top {
-        top: -460px;
-        left: -292px;
-        transform: rotate(18deg);
+        top: -500px;
+        left: -320px;
+        transform: rotate(4deg);
       }
 
       &.bottom {
-        bottom: -572px;
+        bottom: -620px;
         right: -288px;
         transform: rotate(6deg);
       }
+    }
+  }
+
+  .modal {
+    height: 400px;
+    max-width: 360px;
+
+    &_profile {
+      padding-bottom: $space-m;
+    }
+    &_counter {
+      font-size: $font-size-xl;
     }
   }
 }
