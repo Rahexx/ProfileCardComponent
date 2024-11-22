@@ -65,7 +65,7 @@
 
   &_avatar {
     position: absolute;
-    top: calc($avatar-offset - 53px);
+    top: calc(#{$avatar-offset} - 53px);
     left: 50%;
     height: $avatar-size;
     width: $avatar-size;
@@ -154,7 +154,7 @@
     }
 
     &_avatar {
-      top: calc($avatar-offset-large - 53px);
+      top: calc(#{$avatar-offset-large} - 53px);
     }
   }
 }
@@ -207,7 +207,7 @@
     }
 
     &_avatar {
-      top: calc($avatar-offset-medium - 63px);
+      top: calc(#{$avatar-offset-medium} - 63px);
       height: $avatar-size-large;
       width: $avatar-size-large;
     }
